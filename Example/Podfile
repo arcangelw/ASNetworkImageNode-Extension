@@ -4,7 +4,7 @@ platform :ios, '9.0'
 
 target 'ASNetworkImageNode-Extension_Example' do
   pod 'ASNetworkImageNode-Extension', :path => '../'
-
+  pod 'SDWebImageWebPCoder'
   target 'ASNetworkImageNode-Extension_Tests' do
     inherit! :search_paths
 

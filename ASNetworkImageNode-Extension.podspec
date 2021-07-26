@@ -29,14 +29,20 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
+  s.requires_arc = true
 
-  s.source_files = 'ASNetworkImageNode-Extension/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ASNetworkImageNode-Extension' => ['ASNetworkImageNode-Extension/Assets/*.png']
-  # }
+  s.dependency 'Texture/Core'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # Subspecs
+  s.subspec 'SDWebImage' do |pin|
+      pin.source_files = "Source/SDWebImage/**"
+      pin.public_header_files = "Source/SDWebImage/**/*.h"
+      pin.dependency 'SDWebImage/Core'
+  end
+
+  s.subspec 'YYWebImage' do |pin|
+      pin.source_files = "Source/YYWebImage/**"
+      pin.public_header_files = "Source/YYWebImage/**/*.h"
+      pin.dependency 'YYWebImage'
+  end
 end

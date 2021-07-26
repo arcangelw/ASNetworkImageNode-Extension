@@ -7,11 +7,21 @@
 //
 
 #import "ASAppDelegate.h"
+@import SDWebImage;
+@import SDWebImageWebPCoder;
 
 @implementation ASAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if (@available(iOS 14.0, *)) {
+        // iOS 14 支持
+        [[SDImageCodersManager sharedManager] addCoder:[SDImageAWebPCoder sharedCoder]];
+    } else {
+        // iOS 13 以下需要使用libwebp
+        [[SDImageCodersManager sharedManager] addCoder:[SDImageWebPCoder sharedCoder]];
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }

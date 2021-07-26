@@ -7,7 +7,9 @@
 //
 
 @import UIKit;
+@import AsyncDisplayKit;
+@import ASNetworkImageNode_Extension;
 
-@interface ASViewController : UIViewController
+@interface ASViewController : ASDKViewController<ASCollectionNode *>
 
 @end

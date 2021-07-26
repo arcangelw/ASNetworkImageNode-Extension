@@ -61,12 +61,12 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B70B34FF082DF89B2A97349 /* Pods-ASNetworkImageNode-Extension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASNetworkImageNode-Extension_Tests.release.xcconfig"; path = "Target Support Files/Pods-ASNetworkImageNode-Extension_Tests/Pods-ASNetworkImageNode-Extension_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B4530A22BFD648C3CD4CAFAB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B4530A22BFD648C3CD4CAFAB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C200ADAE4C3F8276C716FCD6 /* Pods_ASNetworkImageNode_Extension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASNetworkImageNode_Extension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9211EBC6BB7E35CDF9E4771 /* Pods-ASNetworkImageNode-Extension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASNetworkImageNode-Extension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ASNetworkImageNode-Extension_Tests/Pods-ASNetworkImageNode-Extension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6CF63EFC5CA2BBB06A52A1 /* Pods_ASNetworkImageNode_Extension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASNetworkImageNode_Extension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E68CFFFEC455573C511709B7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E72C42D45E3FFAB5B981698C /* ASNetworkImageNode-Extension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "ASNetworkImageNode-Extension.podspec"; path = "../ASNetworkImageNode-Extension.podspec"; sourceTree = "<group>"; };
+		E68CFFFEC455573C511709B7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E72C42D45E3FFAB5B981698C /* ASNetworkImageNode-Extension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ASNetworkImageNode-Extension.podspec"; path = "../ASNetworkImageNode-Extension.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				C9211EBC6BB7E35CDF9E4771 /* Pods-ASNetworkImageNode-Extension_Tests.debug.xcconfig */,
 				9B70B34FF082DF89B2A97349 /* Pods-ASNetworkImageNode-Extension_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				0F605EDC09962FB1D5FF0013 /* [CP] Embed Pods Frameworks */,
+				5756816B53748107DD7AF46B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -318,24 +318,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0F605EDC09962FB1D5FF0013 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ASNetworkImageNode-Extension_Example/Pods-ASNetworkImageNode-Extension_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ASNetworkImageNode-Extension/ASNetworkImageNode_Extension.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASNetworkImageNode_Extension.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASNetworkImageNode-Extension_Example/Pods-ASNetworkImageNode-Extension_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4CBC5558A45D1304B7D166C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +338,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5756816B53748107DD7AF46B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASNetworkImageNode-Extension_Example/Pods-ASNetworkImageNode-Extension_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ASNetworkImageNode-Extension/ASNetworkImageNode_Extension.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASNetworkImageNode_Extension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImageWebPCoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASNetworkImageNode-Extension_Example/Pods-ASNetworkImageNode-Extension_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A962F3617B0BBC5CC3FA1F3 /* [CP] Embed Pods Frameworks */ = {
